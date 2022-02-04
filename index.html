@@ -7,6 +7,7 @@
     <title>Тестовое задание Истерус</title>
     <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/task2/removeRow.js"></script>
 
 </head>
 
@@ -15,14 +16,58 @@
     <main class="content-box">
         <div class="task1">
             <header class="task1__header">
-                <h1 class="task1__headline">Посты не про JS</h1>
+                <h1 class="task1__headline">Посты не про JS))</h1>
             </header>
 
             <div class="task1__postsList"></div>
 
         </div>
 
-        <div class="task2"></div>
+        <div class="task2">
+            <form class="info" >
+                <input type="text" name="name" class="info__field" pattern="[A-ZА-Я][a-zа-я]*" placeholder="Введите имя:" required/>
+<!--                <input type="text" name="name" class="info__field"  placeholder="Введите имя:" required/>-->
+                <input type="number" name="age" class="info__field" placeholder="Введите возраст:" required min="10" max="65"/>
+<!--                <input type="number" name="age" class="info__field" placeholder="Введите возраст:" required/>-->
+                <br/>
+                <input type="radio" name="gender" class="info__radio" value="М" checked/>Мужской
+                <input type="radio" name="gender" class="info__radio" value="Ж" />Женский
+
+                <input type="submit" class="info__btn-add" id="add-info" value="Добавить"/>
+            </form>
+
+            <table class="table">
+                <thead class="table__head">
+                <tr>
+                    <th class="table__head-cell">Имя</th>
+                    <th class="table__head-cell">Возраст</th>
+                    <th class="table__head-cell">Пол</th>
+                    <th class="table__head-cell">Удалить</th>
+                </tr>
+                </thead>
+                <tbody  class="table__body">
+                <tr>
+                    <td class="table__body-cell">Жанна</td>
+                    <td class="table__body-cell">24</td>
+                    <td class="table__body-cell">Ж</td>
+                    <td class="table__body-cell"><button class="delete-btn" onclick="removeRow(this)">X</button></td>
+                </tr>
+                <tr>
+                    <td class="table__body-cell">Гена</td>
+                    <td class="table__body-cell">13</td>
+                    <td class="table__body-cell">М</td>
+                    <td class="table__body-cell"><button class="delete-btn" onclick="removeRow(this)">X</button></td>
+                </tr>
+                <tr>
+                    <td class="table__body-cell">Виктор</td>
+                    <td class="table__body-cell">36</td>
+                    <td class="table__body-cell">М</td>
+                    <td class="table__body-cell"><button class="delete-btn" onclick="removeRow(this)">X</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
     </main>
 
 </body>

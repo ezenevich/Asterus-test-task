@@ -19,13 +19,14 @@ body {
 
 .task1__header{
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #3abdbd;
   color: #ffffff;
 }
 
 .task1__headline{
   margin: 0;
+  padding-top: 10px;
   padding-left: 20px;
 }
 
@@ -91,18 +92,84 @@ body {
 
 
 
-
-
-
-
-
-
-
 .task2{
-
   grid-column-start: 4;
   grid-column-end: 5;
-
-  border: 2px solid gray;
-
 }
+
+.info{
+  box-sizing: border-box;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 110px;
+  border: 2px solid #7e7e7e;
+}
+
+.info__field{
+  box-sizing: border-box;
+  width: 180px;
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding-left: 5px;
+  border: 2px solid #aaaaaa;
+}
+
+.info__field:focus-visible{
+  outline: none;
+  border: 2px solid #3abdbd;
+}
+
+.info__radio{
+  width: 15px;
+  height: 15px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.info__btn-add{
+  box-sizing: border-box;
+  width: 178px;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border: none;
+  outline: none;
+  background-color: #3abdbd;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.table{
+  margin-top: 50px;
+  width: 98%;
+  border-collapse:collapse;
+}
+
+.table__head-cell{
+  box-sizing: border-box;
+  width: 25%;
+  border-top: 2px solid #7e7e7e;
+  border-bottom: 2px solid #7e7e7e;
+}
+
+.table__body-cell{
+  box-sizing: border-box;
+  width: 25%;
+  border-bottom: 1px solid #aaaaaa;
+  text-align: center;
+}
+
+.delete-btn{
+  background-color: transparent;
+  color: #cb4033;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
