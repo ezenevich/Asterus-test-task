@@ -24,7 +24,7 @@ const createComment = commentData => {
 }
 
 
-const getComment = (postId) => {
+const getComment = async (postId) => {
     const post = document.querySelector(`#post${postId}`);
 
     const commentBox = createElement('div', {
@@ -33,7 +33,7 @@ const getComment = (postId) => {
     });
 
 
-    fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+   await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
         .then(response => response.json())
         .then(json => {
             json.forEach(commentData => {
@@ -41,7 +41,10 @@ const getComment = (postId) => {
                 commentBox.append(comment);
             })
             post.append(commentBox);
-        });
+        })
+       .catch((err) => {
+           console.error(err);
+       });
 }
 
 export default getComment;

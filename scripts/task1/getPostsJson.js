@@ -45,15 +45,18 @@ const createPost = postData => {
 }
 
 
-const getPosts = (app ,limit) => {
+const getPosts = async (app ,limit) => {
 
-    fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`)
+    await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`)
         .then(response => response.json())
         .then(json => {
             json.forEach(postData => {
                 const post = createPost(postData);
                 app.append(post);
             })
+        })
+        .catch((err) => {
+            console.error(err);
         });
 }
 
